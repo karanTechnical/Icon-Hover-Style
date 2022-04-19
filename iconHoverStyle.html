@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha512-0S+nbAYis87iX26mmj/+fWt1MmaKCv80H+Mbo+Ne7ES4I6rxswpfnC6PxmLiw33Ywj2ghbtTw0FkLbMWqh4F7Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<title>Document</title>
+	<style type="text/css">
+		*{padding: 0; margin: 0;}
+		div{
+			height: 100vh; display: flex; justify-content: center;align-items: center;
+		}
+		ul{
+			display: flex;
+		}
+		ul li{
+			list-style: none; width: 200px; height: 200px;/* background-color: #0984e3; */ margin: 10px; border-radius: 50%;
+			display: flex; justify-content: center; align-items: center;
+			position: relative;
+			border: 2px solid #0984e3;
+		}
+		i{ color:#0984e3 ; }
+
+		ul li::before{
+			content: ""; width: inherit; height: inherit; background-color:#0984e3 ; position: absolute;
+			border-radius: 50%; opacity: 0;
+			transition: all 0.3s linear; z-index: -1;
+		}
+		ul li:hover::before{
+			transform: scale(0.8);
+			opacity: 1;
+		}
+		ul li:hover i{
+			color: white;
+		}
+		ul li::after{
+			content: ""; width: inherit; height: inherit; /* background-color:#0984e3 */  position: absolute;
+			border-radius: 50%; opacity: 0;
+			transition: all 0.3s linear;
+			border: 2px dashed #0984e3;}
+			ul li:hover::after{
+				animation: roate 11s linear infinite;
+				opacity: 1;
+			}
+			@keyframes roate {
+				0%{transform: scale(0.9)rotate(0deg);}
+				100%{transform: scale(0.9) rotate(360deg);}
+
+				
+			}
+	</style>
+	
+</head>
+<body>
+ <div>
+ 	<ul>
+ 		<li> <i class="fas fa-heart fa-3x"></i></li>
+ 		<li> <i class="fas fa-gift fa-3x"></i></li>
+ 		<li> <i class="fas fa-globe fa-3x"></i></li>
+ 		<li> <i class="fas fa-star fa-3x"></i></li>
+ 	</ul>
+ </div>
+	
+</body>
+</html>
